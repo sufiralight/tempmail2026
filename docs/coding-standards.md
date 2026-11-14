@@ -1,0 +1,10 @@
+# Coding standards
+
+Follow [AGENTS.md](../AGENTS.md) and the area guides. Check installed and locked package versions before using version-specific APIs. Reuse Laravel conventions, the installed stack and existing Blade APIs. Obtain approval before changing dependencies. Scope any JavaScript to progressive enhancement using existing entry points. Keep core forms and navigation usable without JavaScript where practical.
+
+- Use explicit PHP parameter and return types, constructor property promotion where applicable, braces for control structures and descriptive names. Put business rules in focused server-side operations. Keep controllers thin and Blade focused on presentation.
+- Use named routes, scoped bindings and server-side Gates and policies. Validate input and keep CSRF protection. Escape Blade output by default. Treat mail bodies, attachments and user uploads as untrusted. Keep private files behind authorization and redact secrets in diagnostics.
+- Own schema changes through migrations, preserve released migrations and constrain invariants in the database where possible. Use transactions for related writes. Account for retries and partial failures, particularly in installer and ingress operations.
+- Use semantic Tailwind utilities and literal discoverable class names, shared components and logical spacing. Centralize appearance initialization, icons, feedback and motion patterns. Document changed component APIs.
+- Use PHPUnit feature tests for normal entry points, authorization and failures. Use unit tests for isolated rules. Use isolated data and factories, run the narrow tests during development, and run broader applicable tests before release. For PHP changes use the project Pint command. For frontend changes build Vite assets and verify the rendered interaction in both themes and at mobile and desktop widths.
+- Keep release configuration outside source where it contains secrets. Explain deployment changes in the summary and document upgrade, backup and recovery procedures where a contract changes. Track verification gaps in the [implementation plan](implementation-plan.md).
