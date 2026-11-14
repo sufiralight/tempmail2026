@@ -1,7 +1,8 @@
 # Accessibility
 
-Target WCAG 2.2 AA. Use semantic landmarks and headings, a skip link, meaningful page titles and visible names for controls. Use native controls and their normal Tab, Shift+Tab, Enter and Space behavior. Add ARIA where native HTML cannot express the relationship or state. [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+Target WCAG 2.2 AA. Use semantic landmarks and headings, a skip link, meaningful page titles and visible labels where applicable and accessible names for every control. Use native controls and their normal Tab, Shift+Tab, Enter and Space behavior. Add ARIA where native HTML cannot express the relationship or state. [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 
+- Give icon-only controls an action-specific accessible name and hide decorative icons from assistive technology. Use a native button for an action and a named link for a destination.
 - Associate labels, hints and errors with their fields. Set aria-invalid when validation fails and preserve input according to the form's security rules. For a failed form submission, move focus to the error summary or first invalid field so recovery is discoverable.
 - Use aria-expanded and aria-controls on disclosure triggers. Keep disclosure contents in normal tab order. Implement arrow-key behavior when adopting an ARIA menu or another composite widget with that expectation. Escape closes overlays and returns focus to the trigger when it still exists.
 - Give modal dialogs accessible names. Move focus inside on open, keep it within while modal, and restore it to the invoking control or a logical successor. Keep focused controls visible above sticky regions.

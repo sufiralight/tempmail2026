@@ -2,20 +2,20 @@
 
 ## Phase 0 baseline
 
-This checkout contains the Laravel starter. Product capabilities described in the area guides are planned unless verified in the checkout. Legacy links to unshipped guides identify intended contracts. Start with [Architecture](docs/architecture.md), [Coding standards](docs/coding-standards.md), and the [Implementation plan](docs/implementation-plan.md).
+This checkout contains the Laravel starter. Product capabilities described in the area guides are planned unless verified in the checkout. Start with [Architecture](docs/architecture.md), [Coding standards](docs/coding-standards.md), and the [Implementation plan](docs/implementation-plan.md).
 
 Use [Design system](docs/design-system.md), [Color system](docs/color-system.md), [Components](docs/components.md), [Accessibility](docs/accessibility.md), and [Installation flow](docs/installation-flow.md) as the Phase 0 standards. Obtain approval before implementing application changes.
 
 
-Installer finalization owns the schema, founder transaction and durable lock. See [Installation](docs/installation.md).
+Installer finalization owns the schema, founder transaction and durable lock. See [Installation](docs/installation-flow.md).
 
-Keep Admin Console links and route access aligned with the Laravel admin.access Gate. See [Workspace authorization](docs/authorization.md).
+Keep Admin Console links and route access aligned with the Laravel admin.access Gate. See the [authentication](agents/authentication.md) and [security](agents/security.md) rules.
 
 Use the shared appearance dropdown and keep the default installer form within the desktop viewport. Allow natural scrolling at narrow widths and zoom.
 
 All applicable password fields must use x-ui.password-field. Layouts offering appearance selection must reuse x-appearance and the shared theme initialization.
 
-Authentication forms share the Blade auth layout and appearance selector. See [Authentication](docs/authentication.md) for current checkout coverage.
+Use the planned shared Blade auth layout and appearance selector for authentication forms. See the [authentication rules](agents/authentication.md).
 
 Build a maintainable temporary email SaaS as a Laravel 13 modular monolith. PHP 8.5 is the development and CI target. Use the configured MySQL, MariaDB, PostgreSQL, SQLite or SQL Server connection, Blade, reusable Blade components, Alpine, Tailwind CSS 4, and Vite. Check the manifests, lockfiles, and installed versions before changing dependencies. Preserve working behavior and Laravel conventions.
 
@@ -50,35 +50,35 @@ Future phase and step prompts must reference this file and the applicable guides
 
 ### Functional UX Before Decorative UX
 
-Define a measurable [primary-task contract](docs/design-system.md#primary-task-contract) for every new or revised user-facing screen. Track implementation and release blockers in the [project overview](docs/project-overview.md). A rendered page alone does not establish readiness.
+Define a measurable [primary-task contract](docs/design-system.md#primary-task-contract) for every new or revised user-facing screen. Track implementation and release blockers in the [implementation plan](docs/implementation-plan.md). A rendered page alone does not establish readiness.
 
 ## Git and releases
 
 Keep changes focused and commits descriptive. Preserve Git history and unrelated files. Obtain explicit authorization before rewriting history or force-pushing. Explain deployment configuration changes in the change summary. Keep .env, secrets, sensitive database dumps, runtime caches, and generated release assets out of Git. Use .env.example for non-sensitive settings and package public/build with releases.
 
-Start with the [project overview](docs/project-overview.md), [architecture decisions](docs/decisions.md), and [deployment procedure](docs/deployment.md).
+Start with the [implementation plan](docs/implementation-plan.md) and [architecture and hosting baseline](docs/architecture.md#development-and-hosting).
 
-See [Localization](docs/localization.md) for the language registry, public locale rules, integration contracts, and release gates.
+Before implementing localization, define the language registry, public locale rules, integration contracts, and release gates.
 
-For font catalog policy, locale typography, and deployment checks, see [Fonts Management](docs/localization.md#fonts-management).
+Document font catalog policy, locale typography, and deployment checks when adding font management.
 
-See [UI Translations](docs/localization.md#ui-translations) for key registration, status workflow, escaping and deployment checks.
+Document key registration, status workflow, escaping and deployment checks when adding UI translations.
 
-Keep the Roles & permissions matrix aligned with the [authorization contracts](docs/authorization.md). Verify role counts, direct URL access, and user assignment protections after changes.
+Keep the Roles & permissions matrix aligned with the authorization contracts. Verify role counts, direct URL access, and user assignment protections after changes.
 
-Preserve the installer-recorded Founder Super Admin and the independent last active Super Admin invariant in every account lifecycle change. See [Workspace authorization](docs/authorization.md#founder-super-admin).
+Preserve the installer-recorded Founder Super Admin and the independent last active Super Admin invariant in every account lifecycle change. See the [authentication](agents/authentication.md) and [security](agents/security.md) rules.
 
-Use the [navigation contexts](docs/components.md#navigation-contexts) and [deployment checks](docs/deployment.md#releases-backups-and-troubleshooting) when changing console access or schema-backed features.
+Use the [navigation contexts](docs/components.md#navigation-contexts) and [hosting checks](docs/architecture.md#development-and-hosting) when changing console access or schema-backed features.
 
-Apply the [Branding primary-task contract](docs/media-library.md#branding-workflow) when changing brand assets or their public delivery.
+Apply the Branding primary-task contract when changing brand assets or their public delivery.
 
-Keep [homepage publishing](docs/localization.md#homepage-publishing) separate from public locale resolution. Preserve canonical English, authorization and explicit visitor preferences.
+Keep homepage publishing separate from public locale resolution. Preserve canonical English, authorization and explicit visitor preferences.
 
-Use the [typography contract](docs/localization.md#multiscript-typography) for script defaults, language overrides and technical LTR text.
+Use the typography contract for script defaults, language overrides and technical LTR text.
 
-Keep /admin/fonts as the authoritative Typography Studio. See [Typography Studio](docs/localization.md#typography-studio).
+Keep /admin/fonts as the authoritative Typography Studio.
 
-Keep language availability and homepage publishing in Localization Studio. Link to Typography Studio for locale font settings. See [Localization](docs/localization.md#homepage-publishing).
+Keep language availability and homepage publishing in Localization Studio. Link to Typography Studio for locale font settings.
 
 ===
 
